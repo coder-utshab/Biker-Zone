@@ -3,153 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Biker Zone</title>
+    <!-- tailwind and daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- google font poppins -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allerta&family=Allerta+Stencil&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- tailwind custom classes -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            
+           clifford: '#da373d',
+            'bike-primary': '#E76F51',
+          },
+          backgroundColor: {
+           'bike-primary-bg':'rgba(231,111,81,0.10)',
+          }
+            
+          }
+        }
+      }
+    
+  </script>
+
+
+
+<!-- custom styles -->
+<style>
+.font-poppins{
+  font-family: 'poppins',sans-serif;
+}
+</style>
 </head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biker Zone</title>
-  <!-- TailwindCSS + DaisyUI -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="font-sans">
-
-  <!-- Header -->
-  <header class="bg-base-100 shadow">
-    <div class="container mx-auto px-4">
-      <nav class="navbar">
-        <div class="flex-1">
-          <a class="btn btn-ghost normal-case text-2xl font-bold">Biker Zone</a>
-        </div>
-        <div class="flex-none">
-          <ul class="menu menu-horizontal px-1 text-lg font-medium">
-            <li><a>Home</a></li>
-            <li><a>Shop</a></li>
-            <li><a>About</a></li>
-            <li><a>Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="bg-base-200">
-    <div class="container mx-auto px-4">
-      <div class="hero min-h-[500px]">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-            class="max-w-sm rounded-lg shadow-2xl" />
-          <div>
-            <h1 class="text-5xl font-bold">Ride Your Dream Bike</h1>
-            <p class="py-6">Discover the latest and most stylish bikes designed for performance and comfort.</p>
-            <button class="btn bg-orange-500 text-white hover:bg-orange-600">Get Started</button>
-          </div>
-        </div>
+<body class="font-poppins">
+<header>
+<nav>
+    <div class="navbar bg-base-100">
+  <div class="flex-1">
+    <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost lg:hidden">
+      <!-- <div tabindex="0" role="button" class="btn btn-ghost lg:hidden"> -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+         </label>
       </div>
+      <ul tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52
+         p-2 text-base shadow">
+        <li><a>Home</a></li>
+        <li><a>Shop</a></li>
+        <li><a>New</a></li>
+        <li><a>Contact</a></li>
+        </ul>
     </div>
-  </section>
+    <a href="#" class="btn btn-ghost text-4xl">Biker Zone</a>
 
-  <!-- Featured Bikes -->
-  <section class="my-24">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-semibold text-center mb-12">Featured Bikes</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- Card 1 -->
-        <div class="card bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Bike 1" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Bike Model A</h2>
-            <p>Powerful engine and stylish design for urban rides.</p>
-            <div class="card-actions justify-end">
-              <button class="btn bg-orange-500 text-white hover:bg-orange-600">Buy Now</button>
-            </div>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="card bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Bike 2" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Bike Model B</h2>
-            <p>Perfect balance of speed and comfort for long rides.</p>
-            <div class="card-actions justify-end">
-              <button class="btn bg-orange-500 text-white hover:bg-orange-600">Buy Now</button>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="card bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Bike 3" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Bike Model C</h2>
-            <p>Advanced features with premium comfort for bikers.</p>
-            <div class="card-actions justify-end">
-              <button class="btn bg-orange-500 text-white hover:bg-orange-600">Buy Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu text-base menu-horizontal px-1">
+  
+    <li><a>Home</a></li>
+        <li><a>Shop</a></li>
+        <li><a>New</a></li>
+        <li><a>Contact</a></li>
+    </ul>
+  </div>
+  <div class="">
+    <a class="btn btn-error text-white">Login</a>
+ <!-- <a class="btn btn-primary bg-bike-primary text-white">Button</a> -->
+  </div>
+</div>
+</nav>
+</header>
 
-  <!-- Latest Bikes -->
-  <section class="my-24">
-    <div class="container mx-auto px-4">
-      <h2 class="text-5xl font-semibold text-center mb-12">Latest Bikes</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- Card 1 -->
-        <div class="card w-full bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Bike" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Ducati XDIAVEL s-73</h2>
-            <p>Experience unmatched performance with cutting-edge design.</p>
-            <div class="card-actions">
-              <button class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</button>
-            </div>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="card w-full bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Bike" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Harley Davidson v-99</h2>
-            <p>Luxury bike with a perfect mix of tradition and modernity.</p>
-            <div class="card-actions">
-              <button class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</button>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="card w-full bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Bike" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Kawasaki Ninja ZX-25R</h2>
-            <p>High-speed machine with sporty looks and powerful engine.</p>
-            <div class="card-actions">
-              <button class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-100 py-10 mt-12">
-    <div class="container mx-auto px-4 text-center">
-      <p class="text-gray-600">© 2025 Biker Zone. All rights reserved.</p>
-    </div>
-  </footer>
-
-</body>
-
-</html>
-
+    </main>
 </body>
 </html>
